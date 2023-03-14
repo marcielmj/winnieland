@@ -5,20 +5,28 @@ import { setupCounter } from '@/counter/counter'
 
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    <h1>Vite + TypeScript</h1>
+  <div class="container py-4 px-3 mx-auto">
     <div class="card">
-      <button id="counter" type="button"></button>
+      <div class="card-body">
+        <h1 class="card-title">Vite + TypeScript</h1>
+        <p class="card-text">Click on the Vite and TypeScript logos to learn more</p>
+
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <a href="https://vitejs.dev" target="_blank">
+              <img src="/vite.svg" alt="Vite logo" />
+            </a>
+          </li>
+          <li class="list-group-item">
+            <a href="https://www.typescriptlang.org/" target="_blank">
+              <img src="${typescriptLogo}" alt="TypeScript logo">
+            </a>
+          </li>
+        </ul>
+
+        <button class="btn btn-primary" id="counter" type="button"></button>
+      </div>
     </div>
-    <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
-    </p>
   </div>
 `
 
